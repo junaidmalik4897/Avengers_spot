@@ -1,0 +1,795 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,400;1,500;1,700&family=Yanone+Kaffeesatz:wght@200;300;400;500&display=swap');
+
+* {
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .3s cubic-bezier(.16, .8, .62, 1.52);
+    text-transform: capitalize;
+}
+
+*::selection {
+    background: red;
+    color: #fff;
+}
+
+html {
+    font-size: 62%;
+    overflow-x: hidden;
+}
+
+body {
+
+    overflow-x: hidden;
+
+}
+
+html::-webkit-scrollbar {
+    width: 20px;
+
+}
+
+html::-webkit-scrollbar-track {
+    background: #000;
+
+}
+
+html::-webkit-scrollbar-thumb {
+    background: red;
+
+}
+
+section {
+    min-height: 100vh;
+    padding: 0 7%;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 20px;
+    padding: .7rem 4rem;
+    color: #fff;
+    background: red;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+}
+
+header {
+    position: fixed;
+    top: 45px;
+    left: 50%;
+    height: 55px;
+    transform: translateX(-50%);
+    width: 93%;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: #393E46;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 48px;
+    border-radius: 8px;
+    margin-top: -30px;
+
+}
+
+header .logo {
+    color: #393E46;
+    font-size: 40px;
+    margin-top: 10px;
+
+}
+
+header .logo span {
+    color: red;
+
+}
+
+
+
+header .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+
+}
+
+header .navbar ul li {
+    margin-left: 48px;
+}
+
+header .navbar ul li a {
+    font-size: 40px;
+    color: #393E46;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+    color: red;
+}
+
+#menu {
+    font-size: 30px;
+    color: #393E46;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../images/avengers-infinity-war-artwork-4k.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.home .image {
+    flex: 1 5 40rem;
+}
+
+.home .image img {
+    /*width: 100%;*/
+    margin-top: 120px;
+    margin-left: 120px;
+}
+
+.home .content {
+    flex: 1 1 40rem;
+    padding: 4rem 0;
+    margin-top: 0px;
+}
+
+.home .content h3 {
+    color: red;
+    font-size: 4rem;
+    padding-bottom: 1rem;
+}
+
+.home .content h1 {
+    color: #fff;
+    font-size: 7rem;
+}
+
+.home .content p {
+    color: #aaa;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+
+}
+
+.heading {
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+    font-size: 4rem;
+    padding-top: 120px;
+
+}
+
+.heading span {
+    color: #393E46;
+}
+
+.gallery {
+    background: #f0f0f0;
+
+}
+
+.gallery .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.gallery .box-container .box {
+    flex: 1 1 30rem;
+    height: 40rem;
+    overflow: hidden;
+    background: #393E46;
+    padding: 40px;
+    margin: 40px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.gallery .box-container .box img {
+    height: 100%;
+    object-fit: cover;
+    margin-left: 40px;
+}
+
+.gallery .box-container .box .info {
+    position: absolute;
+    bottom: -120%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background: #fff;
+    padding: 2rem;
+    border: .3rem solid red;
+    border-radius: 7px;
+
+}
+
+.gallery .box-container .box:hover .info {
+    bottom: 2rem;
+}
+
+.gallery .box-container .box .info h3 {
+    background: red;
+    color: #393E46;
+    border-radius: .5rem;
+    margin: 0 5rem;
+    margin-top: -3.7rem;
+    padding: .5rem 2rem;
+    font-size: 2.5rem;
+}
+
+.gallery .box-container .box .info p {
+    font-size: 2rem;
+    color: #393E46;
+    padding: .5rem;
+    padding-top: 2rem;
+}
+
+.gallery .box-container .box:hover img {
+    transform: scale(1.2);
+}
+
+.about {
+    background: #eee;
+    padding-bottom: 3rem;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.about .row .image {
+    flex: 1 1 40rem;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.about .row .image img {
+    height: 50rem;
+
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+
+}
+
+.about .row .content h3 {
+    font-size: 60px;
+
+}
+
+.about .row .content p {
+ appearance: none;
+  border: 0;
+  font-size: 20px;
+}
+
+
+.about .order{
+    appearance: none;
+    border: 0;
+    background: #1C212E;
+    position: relative;
+    height: 63px;
+    width: 240px;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 32px;
+    mask-image: -webkit-radial-gradient(white, black);
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    
+}
+
+.about .order span {
+    --o: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 19px;
+    line-height: 24px;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: var(--o);
+    transition: opacity 0.3s ease;
+}
+
+.about .order span.default {
+    transition-delay: 0.3s;
+  }
+  .order span.success {
+    --offset: 16px;
+    --o: 0;
+  }
+  .about .order span.success svg {
+    width: 12px;
+    height: 10px;
+    display: inline-block;
+    vertical-align: top;
+    fill: none;
+    margin: 7px 0 0 4px;
+    stroke: #16BF78;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    stroke-dashoffset: var(--offset);
+    transition: stroke-dashoffset 0.3s ease;
+  }
+  .about .order:active {
+    transform: scale(0.96);
+  }
+  .about .order .lines {
+    opacity: 0;
+    position: absolute;
+    height: 3px;
+    background: #FFF;
+    border-radius: 2px;
+    width: 6px;
+    top: 30px;
+    left: 100%;
+    box-shadow: 15px 0 0 #FFF, 30px 0 0 #FFF, 45px 0 0 #FFF, 60px 0 0 #FFF, 75px 0 0 #FFF, 90px 0 0 #FFF, 105px 0 0 #FFF, 120px 0 0 #FFF, 135px 0 0 #FFF, 150px 0 0 #FFF, 165px 0 0 #FFF, 180px 0 0 #FFF, 195px 0 0 #FFF, 210px 0 0 #FFF, 225px 0 0 #FFF, 240px 0 0 #FFF, 255px 0 0 #FFF, 270px 0 0 #FFF, 285px 0 0 #FFF, 300px 0 0 #FFF, 315px 0 0 #FFF, 330px 0 0 #FFF;
+  }
+  .about  .order .back, .order .box {
+    --start: #FFF;
+    --stop: #CDD9ED;
+    border-radius: 2px;
+    background: linear-gradient(var(--start), var(--stop));
+    position: absolute;
+  }
+  .about .order .truck {
+    width: 60px;
+    height: 41px;
+    left: 100%;
+    z-index: 1;
+    top: 11px;
+    position: absolute;
+    transform: translateX(24px);
+  }
+  .about .order .truck:before, .order .truck:after {
+    --r: -90deg;
+    content: '';
+    height: 2px;
+    width: 20px;
+    right: 58px;
+    position: absolute;
+    display: block;
+    background: #FFF;
+    border-radius: 1px;
+    transform-origin: 100% 50%;
+    transform: rotate(var(--r));
+  }
+  .about .order .truck:before {
+    top: 4px;
+  }
+  .about .order .truck:after {
+    --r: 90deg;
+    bottom: 4px;
+  }
+  .about .order .truck .back {
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 41px;
+    z-index: 1;
+  }
+  .about .order .truck .front {
+    overflow: hidden;
+    position: absolute;
+    border-radius: 2px 9px 9px 2px;
+    width: 26px;
+    height: 41px;
+    left: 60px;
+  }
+  .about .order .truck .front:before, .order .truck .front:after {
+    content: '';
+    position: absolute;
+    display: block;
+  }
+  .about .order .truck .front:before {
+    height: 13px;
+    width: 2px;
+    left: 0;
+    top: 14px;
+    background: linear-gradient(#6C7486, #3F4656);
+  }
+  .about .order .truck .front:after {
+    border-radius: 2px 9px 9px 2px;
+    background: #275EFE;
+    width: 24px;
+    height: 41px;
+    right: 0;
+  }
+  .about .order .truck .front .window {
+    overflow: hidden;
+    border-radius: 2px 8px 8px 2px;
+    background: #7699FF;
+    transform: perspective(4px) rotateY(3deg);
+    width: 22px;
+    height: 41px;
+    position: absolute;
+    left: 2px;
+    top: 0;
+    z-index: 1;
+    transform-origin: 0 50%;
+  }
+  .about .order .truck .front .window:before, .order .truck .front .window:after {
+    content: '';
+    position: absolute;
+    right: 0;
+  }
+  .about .order .truck .front .window:before {
+    top: 0;
+    bottom: 0;
+    width: 14px;
+    background: #1C212E;
+  }
+  .about .order .truck .front .window:after {
+    width: 14px;
+    top: 7px;
+    height: 4px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.14);
+    transform: skewY(14deg);
+    box-shadow: 0 7px 0 rgba(255, 255, 255, 0.14);
+  }
+  .about .order .truck .light {
+    width: 3px;
+    height: 8px;
+    left: 83px;
+    transform-origin: 100% 50%;
+    position: absolute;
+    border-radius: 2px;
+    transform: scaleX(0.8);
+    background: #f0dc5f;
+  }
+  .about .order .truck .light:before {
+    content: '';
+    height: 4px;
+    width: 7px;
+    opacity: 0;
+    transform: perspective(2px) rotateY(-15deg) scaleX(0.94);
+    position: absolute;
+    transform-origin: 0 50%;
+    left: 3px;
+    top: 50%;
+    margin-top: -2px;
+    background: linear-gradient(90deg, #f0dc5f, rgba(240, 220, 95, 0.7), rgba(240, 220, 95, 0));
+  }
+  .about .order .truck .light.top {
+    top: 4px;
+  }
+  .about .order .truck .light.bottom {
+    bottom: 4px;
+  }
+  .about .order .box {
+    --start: #EDD9A9;
+    --stop: #DCB773;
+    width: 21px;
+    height: 21px;
+    right: 100%;
+    top: 21px;
+  }
+  .about .order .box:before, .order .box:after {
+    content: '';
+    top: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .about .order .box:before {
+    height: 3px;
+    margin-top: -1px;
+    background: rgba(0, 0, 0, 0.1);
+  }
+  .about .order .box:after {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .about .order.animate .default {
+    --o: 0;
+    transition-delay: 0s;
+  }
+  .about .order.animate .success {
+    --offset: 0;
+    --o: 1;
+    transition-delay: 7s;
+  }
+  .about .order.animate .success svg {
+    transition-delay: 7.3s;
+  }
+  .about .order.animate .truck {
+    animation: truck 10s ease forwards;
+  }
+  .about .order.animate .truck:before {
+    animation: door1 2.4s ease forwards 0.3s;
+  }
+  .about .order.animate .truck:after {
+    animation: door2 2.4s ease forwards 0.6s;
+  }
+  .about .order.animate .truck .light:before, .order.animate .truck .light:after {
+    animation: light 10s ease forwards;
+  }
+  .about .order.animate .box {
+    animation: box 10s ease forwards;
+  }
+  .about .order.animate .lines {
+    animation: lines 10s ease forwards;
+  }
+  @keyframes truck {
+    10%, 30% {
+      transform: translateX(-164px);
+    }
+    40% {
+      transform: translateX(-104px);
+    }
+    60% {
+      transform: translateX(-224px);
+    }
+    75%, 100% {
+      transform: translateX(24px);
+    }
+  }
+  @keyframes lines {
+    0%, 30% {
+      opacity: 0;
+      transform: scaleY(0.7) translateX(0);
+    }
+    35%, 65% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0;
+    }
+    100% {
+      transform: scaleY(0.7) translateX(-400px);
+    }
+  }
+  @keyframes light {
+    0%, 30% {
+      opacity: 0;
+      transform: perspective(2px) rotateY(-15deg) scaleX(0.88);
+    }
+    40%, 100% {
+      opacity: 1;
+      transform: perspective(2px) rotateY(-15deg) scaleX(0.94);
+    }
+  }
+  @keyframes door1 {
+    30%, 50% {
+      transform: rotate(32deg);
+    }
+  }
+  @keyframes door2 {
+    30%, 50% {
+      transform: rotate(-32deg);
+    }
+  }
+  @keyframes box {
+    8%, 10% {
+      transform: translateX(40px);
+      opacity: 1;
+    }
+    25% {
+      transform: translateX(112px);
+      opacity: 1;
+    }
+    26% {
+      transform: translateX(112px);
+      opacity: 0;
+    }
+    27%, 100% {
+      transform: translateX(0px);
+      opacity: 0;
+    }
+  }
+
+  
+
+
+
+.movies {
+    background: #222;
+
+}
+
+.movies .heading span {
+    color: #fff;
+
+}
+
+.movies.box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.movies .box-container .box {
+    flex: 1 1 30rem;
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+    margin: 2rem;
+    box-shadow: 0 .3rem .5rem #000;
+
+
+}
+
+.movies .box-container .box img {
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.movies .box-container .box .info {
+    height: 100%;
+    margin-left: 255px;
+    padding: 2rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .7);
+
+}
+
+.movies .box-container .box .info h3 {
+    margin-top: 10px;
+    color: white;
+    font-size: 40px;
+}
+
+
+.movies .box-container .box .info p {
+    color: #fff;
+    font-size: 20px;
+    padding-right: 200px;
+    margin-right: 30px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.movies .box-container .box .info span {
+    font-size: 18px;
+    color: red;
+    padding-top: 30px;
+
+}
+
+.movies .box-container .box .info .stars i {
+    font-size: 30px;
+    color: orange;
+    padding-top: 30px;
+
+}
+
+.review {
+    background: #aaa;
+    margin-top: -20px;
+}
+
+.review .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 40px;
+
+
+
+}
+
+.review .box-container .box {
+    background: #393E46;
+    border: red;
+    text-align: center;
+    padding: 3rem 2rem;
+    object-fit: cover;
+    position: relative;
+    box-shadow: 0 .3rem .5rem #222;
+    height: 300px;
+
+
+}
+
+.review .box-container .box img {
+    height: 9rem;
+    width: 9rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.review .box-container .box p {
+    color: #eee;
+    font-size: 20px;
+}
+
+.review .box-container .box .info {
+    color: #f0f0f0;
+    font-size: 25px;
+}
+
+.review .box-container .box .stars {
+    color: orange;
+}
+
+.footer {
+    text-align: center;
+    background: #222;
+}
+
+.footer .share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.footer .share a {
+    font-size: 18px;
+    color: #ccc;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.footer .share a:hover {
+    color: #eee;
+    transform: scale(1.2);
+
+
+}
+
+.footer .credit {
+    padding: 2rem 1rem;
+    font-size: 30px;
+    color: #fff;
+    background: #111;
+}
+
+.footer .credit a {
+    color: red;
+}
+
